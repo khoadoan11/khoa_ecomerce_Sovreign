@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Sovereign</title>
+    <link rel="shortcut icon" href="../img/Shortcut_Logo.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleProductDetails.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="./HomePage.html" class="logo">
+                <img width="100px" src="../img/Sovereign_Logo.jpg" alt="">
+            </a>
+            <div id="menu">
+                <div class="item">
+                    <a style="color: #ed2025; text-decoration: #ed2025 underline;" href="./HomePage.html">Trang chủ</a>
+                </div>
+                <div class="item dropdown">
+                    <a href="./Product.html">Sản phẩm</a>
+                    <div class="submenu">
+                        <div class="columnLeft">
+                            <a href="#"><b>Áo</b></a><br>
+                            <a href="#">Áo thun tay ngắn</a><br>
+                            <a href="#">Áo thun tay dài</a><br>
+                            <a href="#">Jacket</a><br>
+                        </div>
+                        <div class="columnRight">
+                            <a href="#"><b>Quần</b></a><br>
+                            <a href="#">Quần short</a><br>
+                            <a href="#">Quần Dài</a><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="./Introduce.html">Giới thiệu</a>
+                </div>
+                <div class="item">
+                    <a href="./Contact.html">Liên hệ</a>
+                </div>
+            </div>
+            <div id="actions">
+                <div class="item">
+                    <div class="input-container">
+                        <input required="" id="input" type="text">
+                        <label class="label" for="input">Search...</label>
+                        <div class="underline"></div>
+                        <div class="sideline"></div>
+                        <div class="upperline"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="./Login.html">
+                        <img src="../img/assets/user.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./Cart.html">
+                        <img src="../img/assets/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="containerCart">
+            <div class="header-cart">
+                <h1>Giỏ hàng</h1>
+                <table class="table-product">
+                    <div class="table-title">
+                        <tr class="table-row">
+                            <td colspan="2" class="text-center"> Thông tin chi tiết sản phẩm </td>
+                            <td class="text-center"> Đơn giá </td>
+                            <td class="text-center"> Số lượng </td>
+                            <td class="text-center"> Tổng giá </td>
+                        </tr>
+                    </div>
+                    <div class="table-detail">
+                        <tr class="table-row">
+                            <td class="image-product">
+                                <img class="image-product-child"
+                                    src="https://product.hstatic.net/1000357687/product/artboard_1_026004da1dd74543899278acdba388b6_1024x1024.png"
+                                    alt="">
+                            </td>
+                            <td class="des-product">
+                                <p class="des-product-head" href="">
+                                    Áo thun GOAT Father // White
+                                </p>
+                                <p class="des-product-body" href="">
+                                    Khuyến mãi:
+
+                                </p>
+                                <a class="des-product-footer" href="">xóa</a>
+                            </td>
+                            <td class="price-product">
+                                <p href="" class="price" class="text-center">499,000₫</p>
+                            </td>
+                            <td class="text-center">
+                                <div class="buttons_added">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="10" min="1" name=""
+                                        type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
+                            </td>
+                            <td class="price-product">
+                                <p href="" class="price" class="text-center">499,000₫</p>
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+            <div class="footer-cart">
+                <div class="right-footer">
+                    <p class="footer-head" href="">Chú thích cho cửa hàng</p>
+                    <textarea id="footer-note" cols="30" rows="10"></textarea>
+                    <script>
+                        document.getElementById('footer-note').addEventListener('click', function () {
+                            this.focus();
+                        });
+                    </script>
+                </div>
+                <div class="left-footer">
+                    <div>
+                        <a class="des-product-body" href="">tổng tiền:</a>
+                        <a class="price" href="">499.000₫</a>
+                    </div>
+                    <div>
+                        <p class="left-footer-avtive"> Vận chuyển</p>
+                    </div>
+                    <div class="left-footer-btn">
+                        <button class="left-footer-update">Cập nhật</button>
+                        <button class="left-footer-buy" onclick="showSuccessMessage()">Mua hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footerLeft">
+                <div class="footerFirst">
+                    <div class="footerFirstLogo">
+                        <img width="100px" src="../img/Sovereign_Logo.jpg" alt="">
+                    </div>
+                    <div class="footerFirstAddress">
+                        <ion-icon name="home"></ion-icon>
+                        <a href="https://goo.gl/maps/NDUiq5ZVRiT1adFu5" target="_blank">254 Nguyễn Văn Linh, Hải Châu,
+                            Đà Nẵng</a>
+                    </div>
+                    <div class="footerFirstBotHotline">
+                        <ion-icon name="call"></ion-icon>
+                        <a href="./Contact.html" target="_blank">086 913 2529 - 038 987 6510</a>
+                    </div>
+                    <!-- 471 -->
+                    <div class="footerFirstBotEmail">
+                        <ion-icon name="mail"></ion-icon>
+                        <a href="mailto:sovereign.cc2023@gmail.com">sovereign.cc2023@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="footerSecond">
+                    <div class="footerSecondTop">
+                        <h3>THÔNG TIN</h3>
+                    </div>
+                    <div class="footerSecondBot">
+                        <ul>
+                            <li><a href="./HomePage.html" target="_blank">Trang chủ</a></li>
+                            <li><a href="./Product.html" target="_blank">Sản phẩm</a></li>
+                            <li><a href="./Introduce.html" target="_blank">Giới thiệu</a></li>
+                            <li><a href="./Contact.html" target="_blank">Liên hệ</a></li>
+                            <li><a href="./ClothesSize.html" target="_blank">Bảng size</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footerRight">
+                <div class="footerSocial">
+                    <h4>CHÚNG TÔI TRÊN MẠNG XÃ HỘI</h4>
+                    <div class="listSocial">
+                        <a href="https://www.facebook.com/" target="_blank" class="socialIcon">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="socialIcon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" class="socialIcon">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="backtop">
+        <ion-icon name="rocket"></ion-icon>
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            })
+        })
+        $('#backtop').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        $('input.input-qty').each(function () {
+            var $this = $(this),
+                qty = $this.parent().find('.is-form'),
+                min = Number($this.attr('min')),
+                max = Number($this.attr('max'))
+            if (min == 0) {
+                var d = 0
+            } else d = min
+            $(qty).on('click', function () {
+                if ($(this).hasClass('minus')) {
+                    if (d > min) d += -1
+                } else if ($(this).hasClass('plus')) {
+                    var x = Number($this.val()) + 1
+                    if (x <= max) d += 1
+                }
+                $this.attr('value', d).val(d)
+            })
+        })
+
+        function showSuccessMessage() {
+    alert("Mua hàng thành công!");}
+        
+    </script>
+</body>
+
+</html>
